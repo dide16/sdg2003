@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                background-color: whitesmoke;
+            }
+
+            nav {
+                background-color: rgba(0, 51, 102, 0.8);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .ktu-yazi {
+                color: white;
+            }
+
+            .baslik {
+                display: flex;
+                justify-content: center;
+            }
+            .resimler {
+                display: flex;
+                overflow-x: scroll;
+                margin: 40px 20px 40px 20px;
+                scroll-snap-type: x mandatory;
+            }
+            .resim {
+                scroll-snap-align: center;
+                background-color: aqua;
+                width: 100%;
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-bottom: 2%;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+            .metin-bolumu {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .metin {
+                background-color: whitesmoke;
+                width: 100%;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                padding: 1rem;
+                width: 400px;
+                text-align: center;
+            }
+            .duyurular {
+                display: flex;
+                flex-direction: row;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
+                scroll-snap-type: x mandatory;
+            }
+
+            .duyuru {
+                scroll-snap-align: center;
+                margin-top: 3rem;
+                flex: 0 0 auto;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                background-color: whitesmoke;
+                margin: 3rem 10% 3rem 10%;
+                width: 80vw;
+                height: 40vh;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                padding: 1rem;
+            }
+            .duyuru-baslik {
+                color: black;
+                border-bottom: 2px solid gray;
+                padding: 1rem;
+            }
+            .duyuru-aciklama {
+                color: gray;
+                padding: 1rem;
+                font-size: large;
+            }
+            footer {
+                background-color: rgba(0, 51, 102, 0.8);
+                display: flex;
+                margin-top: 2rem;
+                justify-content: space-around;
+            }
+            .iletisim {
+                padding: 1rem 2rem 1rem 2rem;
+                font-size: large;
+                color: white;
+            }
+
+            .duyurular::-webkit-scrollbar {
+                width: 2px;
+            }
+
+            .duyurular::-webkit-scrollbar-track {
+                background-color: transparent;
+            }
+
+            .duyurular::-webkit-scrollbar-thumb {
+                background-color: rgba(0, 51, 102, 0.8);
+                border-radius: 16px;
+            }
+
+            .resimler::-webkit-scrollbar {
+                width: 2px;
+            }
+
+            .resimler::-webkit-scrollbar-track {
+                background-color: transparent;
+            }
+
+            .resimler::-webkit-scrollbar-thumb {
+                background-color: rgba(0, 51, 102, 0.8);
+                border-radius: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <img
+                class="logo"
+                src="https://www.ktu.edu.tr/image/Logo2.png"
+                alt="KTU Logo2"
+                style="width: 320px; height: 120px"
+            />
+            <h1 class="ktu-yazi">Karadeniz Teknik Üniversitesi</h1>
+        </nav>
+        <div class="baslik">
+            <h1>Akademik Kadro</h1>
+        </div>
+        <div class="resimler">
+            <img
+                class="resim"
+                src="https://www.ktu.edu.tr/slayt/8kC2y5.jpg"
+                alt="slogan"
+            />
+            <img
+                class="resim"
+                src="https://www.ktu.edu.tr/slayt/TktFxA.jpg"
+                alt="abc"
+            />
+            <img
+                class="resim"
+                src="https://www.ktu.edu.tr/slayt/dr8z7Y.jpg"
+                alt=""
+            />
+        </div>
+        <div class="metin-bolumu">
+            <div class="basliklar">
+                <h1 class="metin">Metin Kutusu</h1>
+                <h1 class="metin">Metin Kutusu</h1>
+                <h1 class="metin">Metin Kutusu</h1>
+                <h1 class="metin">Metin Kutusu</h1>
+                <h1 class="metin">Metin Kutusu</h1>
+            </div>
+            <div class="alt-metinler">
+                <h4 class="metin">Metin Kutusu</h4>
+                <h4 class="metin">Metin Kutusu</h4>
+                <h4 class="metin">Metin Kutusu</h4>
+                <h4 class="metin">Metin Kutusu</h4>
+                <h4 class="metin">Metin Kutusu</h4>
+                <h4 class="metin">Metin Kutusu</h4>
+                <h4 class="metin">Metin Kutusu</h4>
+                <h4 class="metin">Metin Kutusu</h4>
+            </div>
+        </div>
+
+        <div class="duyurular x-scroll-bar">
+            <div class="duyuru">
+                <h1 class="duyuru-baslik">Duyuru Başlik</h1>
+                <p class="duyuru-aciklama">Duyuru Açiklama</p>
+            </div>
+            <div class="duyuru">
+                <h1 class="duyuru-baslik">Duyuru Başlik</h1>
+                <p class="duyuru-aciklama">Duyuru Açiklama</p>
+            </div>
+            <div class="duyuru">
+                <h1 class="duyuru-baslik">Duyuru Başlik</h1>
+                <p class="duyuru-aciklama">Duyuru Açiklama</p>
+            </div>
+        </div>
+
+        <footer>
+            <h1 class="iletisim">Mail</h1>
+            <h1 class="iletisim">Telefon</h1>
+            <h1 class="iletisim">Gibi veriler</h1>
+        </footer>
+    </body>
+</html>
